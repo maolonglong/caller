@@ -25,26 +25,6 @@ func main() {
 }
 ```
 
-And some **experimental** API:
-
-```go
-package main
-
-import (
-	"log"
-	"os"
-
-	"go.chensl.me/caller"
-)
-
-func main() {
-	log.SetOutput(&caller.StdLogWriter{Out: os.Stderr})
-	log.Println("hello, world!")
-	// Output:
-	// [foobar/main.go:12] 2022/04/13 19:47:08 hello, world!
-}
-```
-
 ## Benchmark
 
 ```text
